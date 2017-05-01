@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  form(method='POST')
+    input(name='callback', type='hidden', value=callback)
+    input(name='email', placeholder='E-mail', type="text")
+    input(name='password', placeholder='password', type='Password')
+    input(type='submit', value='Signup')
+  a(href='/gateway/?callback=' + callback) Login
