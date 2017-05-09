@@ -18,8 +18,11 @@ exports.up = function(knex, Promise) {
       table.bigInteger('endDate');
       table.text('title');
       table.text('body');
+      table.text('meta');
+      table.text('tags');
       table.string('client');
-      table.boolean('remainingTasks');
+      table.string('flag');
+      table.integer('remainingTasks');
     });
 };
 

@@ -3,11 +3,12 @@ const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 
 var User = DB.Model.extend({
-   tableName: 'users',
-   idAttribute: 'id',
-   initialize: function() {
+  tableName: 'users',
+  idAttribute: 'id',
+  initialize: function() {
     this.on('creating', this.hashPassword, this);
   },
+
   hashPassword: function(model, attrs, options) {
     const hash = bcrypt.hashSync(model.attributes.password, bcrypt.genSaltSync(8), null);
     model.set('password', hash);
@@ -40,5 +41,4 @@ var User = DB.Model.extend({
       });
   }
 });
-
 module.exports = User;

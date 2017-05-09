@@ -11,17 +11,24 @@
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.1",
     "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
     "jsonwebtoken": "^7.4.0",
     "knex": "^0.12.9",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "pg": "^6.1.5",
     "pug": "^2.0.0-beta11",
     "sqlite3": "^3.1.8",
     "winston": "^2.3.1"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "nodemon": "^1.11.0"
   },
   "scripts": {

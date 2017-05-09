@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mind-server:
+    image: morten/mind-server
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      - DB_DRIVER=postgres
+      - DB_HOST=mind-postgres
+      - DB_USER=postgres
+    depends_on:
+      - mind-postgres
+  mind-postgres:
+    image: postgres
