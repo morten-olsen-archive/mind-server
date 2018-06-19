@@ -14,14 +14,15 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
-    "jsonwebtoken": "^7.4.0",
+    "jsonwebtoken": "^8.0.0",
     "knex": "^0.12.9",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pg": "^6.1.5",
     "pug": "^2.0.0-beta11",
-    "sqlite3": "^3.1.8",
-    "winston": "^2.3.1"
+    "sqlite3": "^4.0.0",
+    "winston": "^2.3.1",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -32,6 +33,9 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "dev": "nodemon src/entry.js"
-  }
+    "dev": "nodemon src/entry.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
